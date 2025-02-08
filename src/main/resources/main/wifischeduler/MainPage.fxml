@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Menu?>
-<?import javafx.scene.control.MenuBar?>
-<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
-
 
 <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
@@ -25,33 +23,33 @@
                         <Font name="Roboto Black" size="9.0" />
                      </font>
                   </Button>
+                  <Label layoutX="430.0" layoutY="5.0" text="Wifi Scheduler" textFill="WHITE">
+                     <font>
+                        <Font name="Impact" size="18.0" />
+                     </font>
+                  </Label>
                </children>
             </AnchorPane>
-            <MenuBar layoutY="30.0" prefHeight="30.0" prefWidth="960.0">
-              <menus>
-                <Menu mnemonicParsing="false" text="File">
-                  <items>
-                    <MenuItem mnemonicParsing="false" text="Close" />
-                  </items>
-                </Menu>
-                <Menu mnemonicParsing="false" text="Edit">
-                  <items>
-                    <MenuItem mnemonicParsing="false" text="Delete" />
-                  </items>
-                </Menu>
-                <Menu mnemonicParsing="false" text="Help">
-                  <items>
-                    <MenuItem mnemonicParsing="false" text="About" />
-                  </items>
-                </Menu>
-              </menus>
-            </MenuBar>
-            <AnchorPane layoutX="30.0" layoutY="90.0" prefHeight="250.0" prefWidth="900.0">
+            <AnchorPane layoutY="30.0" prefHeight="30.0" prefWidth="960.0" styleClass="color-darklight-ash" stylesheets="@color.css">
                <children>
-                  <AnchorPane prefHeight="250.0" prefWidth="213.75" styleClass="color-light-ash" stylesheets="@color.css" />
-                  <AnchorPane layoutX="228.75" prefHeight="250.0" prefWidth="213.75" styleClass="color-light-ash" stylesheets="@color.css" />
-                  <AnchorPane layoutX="457.5" prefHeight="250.0" prefWidth="213.75" styleClass="color-light-ash" stylesheets="@color.css" />
-                  <AnchorPane layoutX="686.25" prefHeight="250.0" prefWidth="213.75" styleClass="color-light-ash" stylesheets="@color.css" />
+                  <FontAwesomeIcon fx:id="dashboardButton" fill="#810303" glyphName="USER" layoutX="30.0" layoutY="24.0" size="2em" />
+                  <FontAwesomeIcon fx:id="settingButton" fill="#810303" glyphName="GEAR" layoutX="60.0" layoutY="24.0" size="2em" />
+                  <Label fx:id="dashboardLabel" layoutX="450.0" layoutY="6.0" text="Dashboard" textFill="#810303">
+                     <font>
+                        <Font name="Roboto Black" size="14.0" />
+                     </font>
+                  </Label>
+               </children></AnchorPane>
+            <AnchorPane layoutY="60.0" prefHeight="660.0" prefWidth="960.0">
+               <children>
+                  <AnchorPane layoutX="30.0" layoutY="30.0" prefHeight="250.0" prefWidth="900.0">
+                     <children>
+                        <AnchorPane prefHeight="250.0" prefWidth="213.75" styleClass="color-light-ash" stylesheets="@color.css" />
+                        <AnchorPane layoutX="228.75" prefHeight="250.0" prefWidth="213.75" styleClass="color-light-ash" stylesheets="@color.css" />
+                        <AnchorPane layoutX="457.5" prefHeight="250.0" prefWidth="213.75" styleClass="color-light-ash" stylesheets="@color.css" />
+                        <AnchorPane layoutX="686.25" prefHeight="250.0" prefWidth="213.75" styleClass="color-light-ash" stylesheets="@color.css" />
+                     </children>
+                  </AnchorPane>
                </children>
             </AnchorPane>
          </children>
