@@ -1,0 +1,11 @@
+.title-bar-button {
+    -fx-background-color: transparent;
+    -fx-border-color: #B2BEB5; /* Ash gray border */
+    -fx-border-width: 1px;
+    -fx-text-fill: #B2BEB5; /* Ash gray text */
+}
+
+.title-bar-button:hover {
+    -fx-background-color: #B2BEB5; /* Ash gray background */
+    -fx-text-fill: black;
+}
