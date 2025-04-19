@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.net.URL?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
 <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
@@ -32,15 +35,20 @@
             </AnchorPane>
             <AnchorPane layoutY="30.0" prefHeight="30.0" prefWidth="960.0" styleClass="color-darklight-ash" stylesheets="@color.css">
                <children>
-                  <FontAwesomeIcon fx:id="dashboardButton" fill="#810303" glyphName="USER" layoutX="30.0" layoutY="24.0" size="2em" />
-                  <FontAwesomeIcon fx:id="settingButton" fill="#810303" glyphName="GEAR" layoutX="60.0" layoutY="24.0" size="2em" />
-                  <Label fx:id="dashboardLabel" layoutX="450.0" layoutY="6.0" text="Dashboard" textFill="#810303">
+                  <FontAwesomeIcon fx:id="settingButton" fill="#810303" glyphName="GEAR" layoutX="910.0" layoutY="24.0" size="2em" />
+                  <Label fx:id="dashboardLabel" layoutX="450.0" layoutY="6.0" text="Dashboard" textFill="#810303" visible="false">
                      <font>
                         <Font name="Roboto Black" size="14.0" />
                      </font>
                   </Label>
+                  <Label fx:id="settingsLabel" layoutX="450.0" layoutY="6.0" prefHeight="18.0" prefWidth="68.0" text="Settings" textFill="#810303">
+                     <font>
+                        <Font name="Roboto Black" size="14.0" />
+                     </font>
+                  </Label>
+                  <FontAwesomeIcon fx:id="settingButton1" fill="#810303" glyphName="HOME" layoutX="880.0" layoutY="24.0" size="2em" />
                </children></AnchorPane>
-            <AnchorPane layoutY="60.0" prefHeight="660.0" prefWidth="960.0">
+            <AnchorPane fx:id="dashboardPane" layoutY="60.0" prefHeight="660.0" prefWidth="960.0" visible="false">
                <children>
                   <AnchorPane layoutX="30.0" layoutY="30.0" prefHeight="250.0" prefWidth="900.0">
                      <children>
@@ -50,6 +58,29 @@
                         <AnchorPane layoutX="686.25" prefHeight="250.0" prefWidth="213.75" styleClass="color-light-ash" stylesheets="@color.css" />
                      </children>
                   </AnchorPane>
+                  <AnchorPane layoutX="45.0" layoutY="310.0" prefHeight="320.0" prefWidth="870.0" styleClass="color-light-ash" stylesheets="@color.css" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="dashboardPane1" layoutY="60.0" prefHeight="660.0" prefWidth="960.0">
+               <children>
+                  <SplitPane dividerPositions="0.29797979797979796" layoutX="-3.0" layoutY="-2.0" prefHeight="660.0" prefWidth="960.0" styleClass="color-dark-ash">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <VBox layoutX="35.0" layoutY="80.0" prefHeight="504.0" prefWidth="214.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" prefHeight="36.0" prefWidth="213.0" text="Button" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
+                    </items>
+                     <stylesheets>
+                        <URL value="@color.css" />
+                        <URL value="@SplitPane.css" />
+                     </stylesheets>
+                  </SplitPane>
                </children>
             </AnchorPane>
          </children>

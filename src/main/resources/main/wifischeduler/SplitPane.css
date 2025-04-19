@@ -1,0 +1,8 @@
+.split-pane{
+    -fx-background-color: transparent; /* Makes the divider invisible */
+    -fx-padding: 0; /* Removes extra padding around the divider */
+}
+.split-pane > .split-pane-divider {
+    -fx-background-color: transparent; /* Makes the divider invisible */
+    -fx-padding: 0; /* Removes extra padding around the divider */
+}

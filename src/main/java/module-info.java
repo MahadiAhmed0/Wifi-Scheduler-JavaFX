@@ -10,6 +10,8 @@ module main.wifischeduler {
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
     requires com.almasb.fxgl.all;
+    requires org.seleniumhq.selenium.chrome_driver;
+    requires javax.mail.api;
 
     opens main.wifischeduler to javafx.fxml;
     exports main.wifischeduler;
